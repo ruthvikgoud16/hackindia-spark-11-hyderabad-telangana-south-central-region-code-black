@@ -5,13 +5,13 @@
 > Truth is not assumed. It is proven.  
 > **Deny / refuse = PASS.**
 
-Built by students of **Keshav Memorial Institute of Technology (KMIT)**.
+Built by students of **Code Black**.
 
 | Role | Name |
 |------|------|
 | Backend | **Ruthvik Goud** |
 | Frontend | **Monisha Sarai** |
-| DevOps | **Rohith** |
+| DevOps | **Rohit** |
 
 ---
 
@@ -195,15 +195,14 @@ Native packs: `transcripts/`. Traces: `traces/`.
 
 ---
 
-## Team — KMIT
+## TEAM — CODE BLACK
 
 | Name | Focus |
 |------|--------|
 | **Ruthvik Goud** | Backend · pipeline · auth bridge · eval |
 | **Monisha Sarai** | Frontend · UX · inspection studio |
-| **Rohith** | DevOps · tooling · Mutagent / deploy hygiene |
+| **Rohit** | DevOps · tooling · Mutagent / deploy hygiene |
 
-College: **Keshav Memorial Institute of Technology (KMIT)**
 
 ---
 
