@@ -6,7 +6,7 @@ Team repository for **CODE BLACK** — HackIndia Spark 11, Hyderabad / Telangana
 
 **Evidence-gated enterprise knowledge multi-agent** — authorize before retrieve, cite every claim, treat deny/refuse as success.
 
-| Role | Name (KMIT) |
+| Role | Name  |
 |------|-------------|
 | Backend | Ruthvik Goud |
 | Frontend | Monisha Sarai |
