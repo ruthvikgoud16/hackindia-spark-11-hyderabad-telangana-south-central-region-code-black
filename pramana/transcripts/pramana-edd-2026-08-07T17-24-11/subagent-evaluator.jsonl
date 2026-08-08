@@ -1,0 +1,1 @@
+{"id":"helix-sub-eval-pramana-edd-2026-08-07T17-24-11","parent":"helix-main-pramana-edd-2026-08-07T17-24-11","agent":"mutagent-evaluator-deterministic","startTime":"2026-08-07T17:24:15.292Z","messages":[{"role":"user","content":"Evaluate trust-core dataset"},{"role":"assistant","content":"passRate=1 passed=27/27"}]}

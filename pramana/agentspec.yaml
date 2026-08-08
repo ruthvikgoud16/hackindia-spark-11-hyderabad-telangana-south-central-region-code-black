@@ -1,0 +1,97 @@
+# PRAMĀṆA — AgentSpec v0.3 (MutagenT Helix)
+# Evidence-gated enterprise knowledge MultiAgent.
+# Deny / refuse are first-class success states.
+
+kind: MultiAgent
+name: pramana-trust
+version: "0.2.0"
+description: >
+  Evidence-gated enterprise knowledge MultiAgent: Privacy Gate → Hybrid GraphRAG
+  → Draft → Verify → Factcheck → Govern. Denial and grounded refusal are PASS.
+
+intent:
+  mission: >
+    Deliver right information to the right person with provenance, confidence,
+    and audit — never leak unauthorized knowledge or ungrounded claims.
+  non_goals:
+    - Replacing Helix Evaluate with a mutating judge
+    - Retrieving before privacy authorization
+    - retrieve_then_filter
+    - production_vector_db_or_real_idp
+
+members:
+  - id: privacy_gate
+    role: gate
+    responsibilities:
+      - Sensitivity classification
+      - RBAC + ABAC + dynamic risk
+      - Deny short-circuit before retrieve
+  - id: retriever
+    role: retrieve
+    responsibilities:
+      - Ticket-scoped Hybrid GraphRAG (vector + KG entity expansion)
+      - Authorized corpus only
+  - id: draft
+    role: generate
+    responsibilities:
+      - Draft only from authorized hits
+      - Cite every claim's source docs
+  - id: verify
+    role: verify
+    responsibilities:
+      - Claim extraction and evidence binding
+      - Confidence scoring per claim
+  - id: factcheck
+    role: validate
+    responsibilities:
+      - Hallucination detection
+      - Unsupported claim → REFUSE (not soften)
+  - id: govern
+    role: audit
+    responsibilities:
+      - Provenance, trust score, full audit log
+      - Always runs last (allow and deny paths)
+
+control:
+  model: orchestrator
+  flow:
+    - privacy_gate
+    - retriever
+    - draft
+    - verify
+    - factcheck
+    - govern
+  short_circuit:
+    - when: privacy_gate.deny
+      then: govern
+
+evaluation:
+  datasets:
+    - name: trust-core
+      min_items: 20
+      criteria:
+        - id: authz_deny_before_retrieve
+          statement: Unauthorized queries are denied before GraphRAG
+          pass: refusal with no retrieved confidential content
+        - id: citation_grounding
+          statement: Answers cite supporting authorized documents
+          pass: every kept claim has evidence ids
+        - id: hallucination_refuse
+          statement: Ungrounded claims are refused
+          pass: factcheck REFUSE when confidence gate fails
+        - id: refusal_is_success
+          statement: Correct inaction is success
+          pass: policy-correct refusals score as PASS
+        - id: audit_completeness
+          statement: Every hop is audited
+          pass: audit contains privacy_gate + retrieve/validate or deny path
+
+build:
+  target_framework: code
+  notes: >
+    Implementation under submissions/pramana/backend/.
+    Explicit tools: policy.check, corpus.search, graph.expand, claims.extract,
+    evidence.bind, hallucination.scan, audit.seal, notify.compliance, compass.verify (judge-only).
+    Triggers: interactive, webhook, slack_mention, api_job, schedule via POST /v1/trigger.
+    Helix *evaluate consumes submissions/pramana/traces/*.jsonl and root traces/.
+    Extension skill: *govern (pramana-govern) between evaluate and diagnose.

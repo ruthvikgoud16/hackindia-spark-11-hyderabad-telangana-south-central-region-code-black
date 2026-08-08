@@ -1,0 +1,3 @@
+{"type":"session_meta","id":"evolve-main-pramana-evolve-2026-08-07T17-35-09","harness":"cursor+pramana-edd-self-evolve","stages":["evaluate","diagnose","optimize-apply","evaluate","ship"],"startTime":"2026-08-07T17:35:13.314Z"}
+{"type":"message","role":"user","content":"*evaluate then self-evolve on authz regression"}
+{"type":"message","role":"assistant","content":"Round1 18/27 FAIL → diagnose OPTIMIZE → applied privacy_gate restore → Round2 27/27 SHIP"}

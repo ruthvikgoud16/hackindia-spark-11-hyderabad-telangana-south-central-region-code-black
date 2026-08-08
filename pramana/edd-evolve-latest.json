@@ -1,0 +1,22 @@
+{
+  "runId": "pramana-evolve-2026-08-07T17-35-09",
+  "selfEvolve": true,
+  "round1": {
+    "passed": 18,
+    "total": 27,
+    "failed": 9
+  },
+  "round2": {
+    "passed": 27,
+    "total": 27,
+    "failed": 0
+  },
+  "optimizeApplied": true,
+  "route": "SHIP",
+  "paths": {
+    "run": "E:\\PRAMANA\\.mutagent\\evaluator\\runs\\pramana-evolve-2026-08-07T17-35-09",
+    "diagnostics": "E:\\PRAMANA\\.mutagent\\diagnostics\\runs\\pramana-evolve-2026-08-07T17-35-09",
+    "optimize": "E:\\PRAMANA\\.mutagent\\optimize\\runs\\pramana-evolve-2026-08-07T17-35-09",
+    "transcripts": "E:\\PRAMANA\\submissions\\pramana\\transcripts\\pramana-evolve-2026-08-07T17-35-09"
+  }
+}

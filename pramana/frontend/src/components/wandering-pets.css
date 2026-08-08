@@ -1,0 +1,112 @@
+/* Hangs from the New inquiry button (parent is position: relative). */
+.spidey-from-query {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 148px;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 6;
+}
+
+.spidey-bubble {
+  position: absolute;
+  top: 10px;
+  left: 62%;
+  z-index: 3;
+  max-width: 9.5rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 1rem 1rem 1rem 0.2rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(45, 82, 73, 0.14);
+  color: #2d5249;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+  box-shadow: 0 8px 18px rgba(28, 43, 40, 0.1);
+  animation: spidey-bubble-in 0.4s ease-out both;
+}
+
+.spidey-bubble::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  background: rgba(255, 255, 255, 0.96);
+  border-right: 1px solid rgba(45, 82, 73, 0.14);
+  border-bottom: 1px solid rgba(45, 82, 73, 0.14);
+  transform: rotate(45deg);
+}
+
+.spidey-swing {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 92px;
+  margin-left: -46px;
+  transform-origin: 50% 0;
+  filter: drop-shadow(0 8px 12px rgba(28, 43, 40, 0.18));
+}
+
+.spidey-img {
+  display: block;
+  width: 92px;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.spidey-swing.is-greet {
+  animation: spidey-bob 1.5s ease-in-out infinite;
+}
+
+.spidey-swing.is-play {
+  animation: spidey-pendulum 2.8s ease-in-out infinite;
+}
+
+.spidey-from-query.is-static .spidey-swing {
+  animation: none;
+}
+
+@keyframes spidey-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spidey-bob {
+  0%,
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(4deg) translateY(3px);
+  }
+}
+
+@keyframes spidey-pendulum {
+  0%,
+  100% {
+    transform: rotate(-14deg);
+  }
+  50% {
+    transform: rotate(14deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spidey-swing.is-greet,
+  .spidey-swing.is-play {
+    animation: none;
+  }
+}

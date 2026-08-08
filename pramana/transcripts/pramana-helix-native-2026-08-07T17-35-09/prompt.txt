@@ -1,0 +1,6 @@
+Boot Mutagent Helix for this repo.
+1) Read AGENTS.md at repo root.
+2) Read .agents/skills/mutagent-helix/orchestrator.md — adopt Helix persona briefly.
+3) Output a COMPACT *status (lifecycle stage + onboarding from .mutagent/config.yaml) — do NOT paste the full ASCII dashboard box (token budget).
+4) Run Bash: npm run eval — report pass/total only.
+5) If all green, say Diagnose→SHIP. Do not edit files. Then stop.

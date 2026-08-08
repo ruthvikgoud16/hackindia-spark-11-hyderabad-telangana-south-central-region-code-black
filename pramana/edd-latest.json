@@ -1,0 +1,34 @@
+{
+  "runId": "pramana-edd-2026-08-07T17-24-11",
+  "evaluate": {
+    "passed": 27,
+    "total": 27,
+    "passRate": 1
+  },
+  "govern": {
+    "usedLlm": true,
+    "class": "SHIP",
+    "note": "Perfect scorecard (27/27, 100% pass rate) across all critical criteria including authorization, citation grounding, hallucination prevention, and audit completeness. Zero failures indicate production-ready quality.",
+    "raw": "```json\n{\n  \"class\": \"SHIP\",\n  \"reason\": \"Perfect scorecard (27/27, 100% pass rate) across all critical criteria including authorization, citation grounding, hallucination prevention, and audit completeness. Zero failures indicate production-ready quality.\"\n}\n```"
+  },
+  "diagnose": {
+    "runId": "pramana-edd-2026-08-07T17-24-11",
+    "route": "SHIP",
+    "failures": [],
+    "governClass": "SHIP",
+    "remedies": [],
+    "note": "Evaluator succeeded → suggest SHIP (Burak). No diagnostics RCA needed."
+  },
+  "optimize": {
+    "runId": "pramana-edd-2026-08-07T17-24-11",
+    "applied": false,
+    "reason": "SHIP — no optimize apply required",
+    "applyGate": "human-approval-required"
+  },
+  "paths": {
+    "run": "E:\\PRAMANA\\.mutagent\\evaluator\\runs\\pramana-edd-2026-08-07T17-24-11",
+    "diagnostics": "E:\\PRAMANA\\.mutagent\\diagnostics\\runs\\pramana-edd-2026-08-07T17-24-11",
+    "optimize": "E:\\PRAMANA\\.mutagent\\optimize\\runs\\pramana-edd-2026-08-07T17-24-11",
+    "transcripts": "E:\\PRAMANA\\submissions\\pramana\\transcripts\\pramana-edd-2026-08-07T17-24-11"
+  }
+}

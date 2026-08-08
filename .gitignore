@@ -141,3 +141,12 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# PRAMANA / CODE BLACK extras
+pramana/.env.local
+pramana/frontend/.env.local
+pramana/node_modules/
+pramana/frontend/node_modules/
+pramana/frontend/dist/
+pramana/.mutagent/
+pramana/files/_gen/

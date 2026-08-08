@@ -1,0 +1,30 @@
+{
+  "name": "pramana",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch backend/src/index.ts",
+    "dev:web": "npm --prefix frontend run dev",
+    "build:web": "npm --prefix frontend run build",
+    "start": "tsx backend/src/index.ts",
+    "test": "tsx --test backend/tests/pipeline.test.ts",
+    "eval": "tsx eval/runEval.ts",
+    "edd": "tsx backend/src/edd/runEdd.ts",
+    "edd:evolve": "tsx backend/src/edd/runEddSelfEvolve.ts",
+    "helix:native": "tsx backend/src/edd/runHelixNative.ts",
+    "typecheck": "tsc -p backend/tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "~5.9.2"
+  }
+}

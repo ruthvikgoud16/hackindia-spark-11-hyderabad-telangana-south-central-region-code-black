@@ -1,0 +1,23 @@
+# Local secrets — never commit
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+
+# Runtime data
+.mutagent/
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+*.log
+.DS_Store
+
+# Judge PDF generator scratch
+files/_gen/
+
+
+frontend/tsconfig.tsbuildinfo
+

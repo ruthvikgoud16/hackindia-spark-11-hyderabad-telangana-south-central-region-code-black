@@ -1,0 +1,2 @@
+{"type":"message","role":"assistant","agent":"evaluator","round":1,"content":"FAIL 18/27 failures=salary-deny-hr-dept,salary-deny-low-clearance,board-deny-employee,board-deny-analyst-l3,expense-deny-hr,adv-injection-query,adv-spoof-allow,bot-salary-deny,restricted-deny-manager-l3"}
+{"type":"message","role":"assistant","agent":"evaluator","round":2,"content":"PASS 27/27"}

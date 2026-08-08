@@ -1,0 +1,1 @@
+{"type":"message","role":"assistant","agent":"optimize","content":{"runId":"pramana-evolve-2026-08-07T17-35-09","applied":true,"approval":"npm run edd:evolve","change":{"file":"submissions/pramana/backend/src/agents/privacy_gate.ts","before":"const allow = true; // regression","after":"const allow = rbac.ok && abac.ok && risk < 85 && reachable;"}}}
